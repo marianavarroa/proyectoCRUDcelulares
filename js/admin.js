@@ -15,6 +15,7 @@ let producto = document.querySelector("#producto");
 let codigo = document.querySelector("#codigo");
 let url = document.querySelector("#url");
 let descripcion = document.querySelector("#descripcion");
+let precio = document.querySelector('#precio')
 let formulario = document.querySelector("#formProducto");
 let btnAgregar = document.querySelector("#btnAgregar");
 
@@ -30,6 +31,9 @@ descripcion.addEventListener("blur", () => {
 });
 url.addEventListener("blur", () => {
   validarUrl(url);
+});
+precio.addEventListener('blur', () => {
+  validarCampoRequerido(precio);
 });
 formulario.addEventListener("submit", guardarProducto);
 btnAgregar.addEventListener("click", limpiarFormulario);
@@ -75,7 +79,8 @@ function agregarProducto() {
     producto.value,
     descripcion.value,
     cantidad.value,
-    url.value
+    url.value,
+    precio.value
   );
   //guardar el producto en un array
   productos.push(productoNuevo);
@@ -104,6 +109,7 @@ function crearFila(itemProducto) {
     <td>${itemProducto.producto}</td>
     <td>${itemProducto.descripcion}</td>
     <td>${itemProducto.url}</td>
+    <td>${itemProducto.precio}</td>
     <td>
       <button class="btn btn-warning" onclick="prepararEdicionProducto(${itemProducto.codigo})">Editar</button>
       <button class="btn btn-danger" onclick="borrarProducto(${itemProducto.codigo})">Borrar</button>
@@ -132,7 +138,50 @@ window.prepararEdicionProducto = (codigo) => {
     document.querySelector("#producto").value = productoEncontrado.producto;
     document.querySelector("#descripcion").value = productoEncontrado.descripcion;
     document.querySelector("#url").value = productoEncontrado.url;
+    document.querySelector("#precio").value = productoEncontrado.precio;
     //cambiar el valor de la variable bandera para editar
     productoExistente = true;
   };
-  
+
+  function borrarFilas() {
+    //traigo el nodo padre que sería el tbody
+    let tabla = document.querySelector("#tablaProductos");
+    tabla.innerHTML = "";
+  }
+
+  window.borrarProducto = (codigo) => {
+    //console.log(codigo);
+    Swal.fire({
+      title: '¿Está seguro que desea eliminar el producto?',
+      text: "Este proceso no puede revertirse",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, deseo eliminarlo',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //acá agrego el código si quiero borrar
+        //op1 usar splice(indice, 1), para obtener el indice puedo usar findindex
+        //op2
+        let _productos = productos.filter((itemProducto) => {return itemProducto.codigo != codigo})
+        console.log(_productos);
+        //actualizar el arreglo y el localStorage
+        productos = _productos;
+        localStorage.setItem('productosKey', JSON.stringify(productos));
+        //borramos la tabla
+        borrarFilas();
+        //vuelvo a dibujar la tabla
+        productos.forEach((itemProducto) => {
+          crearFila(itemProducto);
+        });
+        //muestro el mensaje
+        Swal.fire(
+          'Producto eliminado',
+          'El producto fue eliminado con éxito.',
+          'success'
+        )
+      }
+    })
+  }

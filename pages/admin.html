@@ -42,6 +42,11 @@
               <input type="text" class="form-control rounded-pill border-dark border-1" id="url" required/>
               <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
             </div>
+            <div class="mb-3">
+              <label for="url" class="form-label text-light">Precio:</label>
+              <input type="text" class="form-control rounded-pill border-dark border-1" id="precio" required/>
+              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
+            </div>
             <div class="alert alert-danger d-none" role="alert" id="msjAlerta">
               Debe completar todos los datos marcados
             </div>
@@ -62,26 +67,6 @@
                 <th scope="col">Descripción</th>
                 <th scope="col">URL</th>
                 <th scope="col">Acciones</th>
-              </tr>
-              <tr>
-                <th scope="row">Una</th>
-                <td>Prueba</td>
-                <td>Para probar</td>
-                <td>Pruebas</td>
-                <td>
-                  <button class="btn btn-warning" onclick="prepararEdicionProducto()">Editar</button>
-                  <button class="btn btn-danger" onclick="borrarProducto()">Borrar</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Una</th>
-                <td>Prueba</td>
-                <td>Para probar</td>
-                <td>Pruebas</td>
-                <td>
-                  <button class="btn btn-warning" onclick="prepararEdicionProducto()">Editar</button>
-                  <button class="btn btn-danger" onclick="borrarProducto()">Borrar</button>
-                </td>
               </tr>
             </thead>
             <tbody id="tablaProductos"></tbody>

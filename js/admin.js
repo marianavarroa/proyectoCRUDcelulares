@@ -81,13 +81,12 @@ function agregarProducto() {
     codigo.value,
     producto.value,
     descripcion.value,
-    cantidad.value,
     url.value,
     precio.value
   );
   //guardar el producto en un array
   productos.push(productoNuevo);
-  console.log(productos);
+  //console.log(productos);
   //guardar en localstorage
   localStorage.setItem("productosKey", JSON.stringify(productos));
   //limpiar el formulario
@@ -126,6 +125,10 @@ function limpiarFormulario() {
   formulario.reset();
   //limpiar las clases de cada elemento del form
   codigo.className = "form-control rounded-pill border-dark border-1";
+  producto.className = "form-control rounded-pill border-dark border-1";
+  descripcion.className = "form-control rounded-pill border-dark border-1";
+  url.className = "form-control rounded-pill border-dark border-1";
+  precio.className = "form-control rounded-pill border-dark border-1";
   //terminar de limpiar los inputs
   productoExistente = false;
 }
@@ -190,6 +193,55 @@ window.borrarProducto = (codigo) => {
     }
   });
 };
+
+function actualizarProducto() {
+  //console.log(codigo.value);
+  //console.log("Acá tengo que mofificar los productos");
+  Swal.fire({
+    title: "¿Está seguro que desea editar el producto?",
+    text: "No puede revertir este proceso",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, deseo editarlo.",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      //acá es donde procederemos a editar
+      //buscar el indice del objeto con el codigo indicado
+      let indiceProducto = productos.findIndex((itemProducto) => {
+        return itemProducto.codigo == codigo.value;
+      });
+      //console.log(indiceProducto);
+      //console.log(productos[indiceProducto].nombreProducto);
+      //actualizar los valores del objeto encontrado dentro del array
+      productos[indiceProducto].producto =
+        document.querySelector("#producto").value;
+      productos[indiceProducto].descripcion =
+        document.querySelector("#descripcion").value;
+      productos[indiceProducto].url = document.querySelector("#url").value;
+      productos[indiceProducto].precio = document.querySelector('#precio').value;
+
+      console.log(productos[indiceProducto]);
+      //actualizar localStorage
+      localStorage.setItem("productosKey", JSON.stringify(productos));
+      //actualizar la tabla
+      borrarFilas();
+      productos.forEach((itemProducto) => {
+        crearFila(itemProducto);
+      });
+      //limpiar el formulario
+      limpiarFormulario();
+      //mostrar un mensaje que el producto fue editado
+      Swal.fire(
+        "Producto editado!",
+        "Su producto fue editado con éxito",
+        "success"
+      );
+    }
+  });
+}
 
 function cargarDatosPrueba() {
   const datos = [

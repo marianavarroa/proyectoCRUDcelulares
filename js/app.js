@@ -1,8 +1,8 @@
+// prueba con clase y objetos
 class Celular {
     constructor(imagen, descripcion, caracteristicas, precio){
         this.imagen = imagen;
         this.descripcion = descripcion;
-        this.caracteristicas = caracteristicas;
         this.precio = precio;
     }
 }
@@ -16,10 +16,12 @@ let productos = [celularIphone, celularMotorola, celularSamsung];
 
 cargarInicial();
 
-// localStorage.setItem('listaCelularkey', JSON.stringify(celularIphone));
+// localstorage
+
+// localStorage.setItem('...', JSON.stringify(...));
 
 function cargarInicial() {
-    /* productos = JSON.parse(localStorage.getItem('listaProductosKey')) || [];
+    /* productos = JSON.parse(localStorage.getItem('...')) || [];
 
     // si hay datos dentro del arreglo dibujo las columnas con cards
     if (productos.length > 0) {

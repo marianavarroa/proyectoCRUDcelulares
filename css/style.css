@@ -7,11 +7,33 @@
   text-decoration: none;
 }
 
+.carousel .item {
+  height: 300px;
+}
 
-/* producto */
-.productoCelular {
-  cursor: pointer;
+#titulo {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
   }
+  100% {
+    background-position: 500%;
+  }
+}
 
 /* efecto transicion */
 .transicion1 {
@@ -34,6 +56,7 @@
   color: #3498db;
 }
 
+/* box shadow */
 .card:hover {
   box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);
 -webkit-box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);

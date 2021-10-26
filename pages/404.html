@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Página de administración de celulares">
-    <meta name="keywords" content="Crear producto, eliminar, editar">
-    <meta name="author" content="Grupo 2 Comisión 16i">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Administración</title>
+    <meta name="description" content="Pagina de error 404">
+    <meta name="keywords" content="error, 404, pagina, error404">
+    <meta name="author" content="Grupo 2 Comision 16i Gonzalo Cainzo">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>¡Pagina no encontrada!</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header>
@@ -45,10 +44,10 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav container text-start" >
-              <a class="nav-link mx-5" href="index.html"
+              <a class="nav-link mx-5" aria-current="page" href="index.html"
                 >Inicio</a
               >
-              <a class="nav-link mx-5" aria-current="page" href="/pages/admin.html">Administracion</a>
+              <a class="nav-link mx-5" href="/pages/admin.html">Administracion</a>
               <a class="nav-link mx-5" href="/pages/sobrenosotros.html">Sobre Nosotros</a>
               <a class="nav-link mx-5" id="linkRegistro" href="/pages/registro.html">Registro</a>
               <a class="nav-link mx-5" id="linkPerfil" href="/pages/login.html">Login</a>
@@ -57,69 +56,19 @@
         </div>
       </nav>
     </header>
-    <main class="container">
-      <section>
-        <h1 class="text-center display-3 mt-5">Productos</h1>
-        <article>
-          <form class="bg-light py-4 px-3 rounded my-4 border border-dark " id="formProducto">
-            <div class="mb-3">
-              <label for="codigo" class="form-label text-dark"
-                >Código único de producto:</label
-              >
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="codigo" required />
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
-            </div>
-            <div class="mb-3">
-              <label for="producto" class="form-label text-dark"
-                >Nombre de producto:</label
-              >
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="producto" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
-            </div>
-            <div class="mb-3">
-              <label for="descripcion" class="form-label text-dark">Descripción:</label>
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="descripcion" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
-            </div>
-            <div class="mb-3">
-              <label for="url" class="form-label text-dark">Imagen URL:</label>
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="url" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
-            </div>
-            <div class="mb-3">
-              <label for="url" class="form-label text-dark">Precio:</label>
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="precio" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
-            </div>
-            <div class="alert alert-danger d-none" role="alert" id="msjAlerta">
-              Debe completar todos los datos marcados
-            </div>
-            <button type="submit" class="btn btn-outline-dark border-dark rounded-pill border">Guardar</button>
-          </form>
-        </article>
-      </section>
-      <section>
-        <h2 class="display-3 text-center">Tabla de productos</h2>
-        <hr />
-        <button class="btn btn-outline-dark rounded-pill my-3" id="btnAgregar">Nuevo</button>
-        <button class="btn btn-outline-dark rounded-pill" id="cargaDatosPrueba">Cargar datos de prueba</button>
-        <div class="table-responsive">
-          <table class="table table-light border border-dark rounded">
-            <thead>
-              <tr>
-                <th scope="col">Cod</th>
-                <th scope="col">Producto</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">URL</th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody id="tablaProductos"></tbody>
-          </table>
-        </div>
-      </section>
+    <main class="my-5 container text-center align-items-center ">
+      <div>
+        <img class="m-5 w-50" src="/img/not-found-img.png" alt="" />
+        <p class="text-secondary">
+          La pagina a la que ingreso no existe o se encuentra actualmente bajo
+          mantenimiento, por favor disculpe las molestias.
+        </p>
+        
+      </div>
     </main>
-    <footer class="bg-light text-secondary letraChica mt-auto">
+          <!-- ======COMIENZA EL FOOTER===== -->
+          <!-- ======cambiar los links del footer===== -->
+    <footer class="bg-light text-secondary letraChica   mt-auto">
       <div class="container">
         <!-- ======DIVIDIENDO FOOTER EN  COLUMNAS===== -->
         <div class="row">
@@ -199,8 +148,12 @@
         </div>
       </div>
     </footer>
-    <script src="../js/bootstrap.min.js"></script>
-    <script type="module" src="../js/admin.js"></script>
-
+    <!-- ===========FIN FOOTER============== -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="module" src="/js/manejarNavbar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fa326d3c28.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

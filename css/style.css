@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans+Condensed:wght@300&display=swap');
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+.colorNavbar{
+    background: rgba(24, 23, 23, 0.767);
+    backdrop-filter: blur(5px);
+}
+.letraChica{
+    font-size: 12px;
+}
+.logo{
+    font-size: 15px;
+}
+.claseLinksFooter{
+    text-decoration: none;
+}  
+.linea-footer{
+    
+    height: 50%;
+}
+.botonToggler{
+    border: 0px;
+}
+.botonToggler:focus{
+    box-shadow: none;
+}
+.linea-footer{
+    width: 0.1px;
+    height: 50%;
+}
+
+@media all and (max-width: 991px){
+  
+    
+}
+@media (max-width: 768px) { 
+    .linea-footer{
+        width: 75%;
+        height: 1px;
+    }
+}
+
+
+.logo2{
+    display: none;
+}
+@media all and (max-width: 576px){
+    .logo1{
+    display: none;
+    }
+    .logo2{
+        display: block;
+    }
+    
+}
+
+.esconderElemento{
+    display: none;
+}

@@ -5,6 +5,8 @@ import {
   validarGeneral,
 } from "./validaciones.js";
 
+import { Producto } from "./productoClass.js";
+
 //Declaro variables
 let productos = []; //agrego un array vacio para los productos
 //false -> tengo que agregar un producto nuevo.
@@ -112,8 +114,8 @@ function crearFila(itemProducto) {
     <td>${itemProducto.url}</td>
     <td>${itemProducto.precio}</td>
     <td>
-      <button class="btn btn-warning" onclick="prepararEdicionProducto(${itemProducto.codigo})">Editar</button>
-      <button class="btn btn-danger" onclick="borrarProducto(${itemProducto.codigo})">Borrar</button>
+      <button class="btn btn-outline-dark my-2" onclick="prepararEdicionProducto(${itemProducto.codigo})">Editar</button>
+      <button class="btn btn-outline-danger my-2" onclick="borrarProducto(${itemProducto.codigo})">Borrar</button>
     </td>
   </tr>`;
 }
@@ -194,8 +196,8 @@ function cargarDatosPrueba() {
     {
       codigo: "1234",
       producto: "Samsung Galaxy S20 FE 128 GB cloud mint 6 GB RAM",
-      cantidad: "1",
       descripcion: "Procesador Exynos 990 Octa-Core de 2.73GHz con 6GB de RAM.",
+      cantidad: "1",
       url: "https://http2.mlstatic.com/D_NQ_NP_637579-MLA47860056829_102021-O.webp",
       precio: "$86.999",
     },

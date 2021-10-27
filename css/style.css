@@ -83,7 +83,7 @@ div.foto .texto{
 }
 
 div.foto img{
-   min-width: 222px;;
+   min-width: 222px;
 }
 
 div.imagen{
@@ -104,4 +104,26 @@ div.fila{
     text-align: end;
     padding-top: 5rem;
     font-style: italic;
+}
+.card{
+    width: 15rem;
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    .fila{
+        display: flex;
+        justify-content: space-evenly !important;
+    }
+    .card{
+        width: 18rem;
+        margin: 15px;
+    }
+}
+@media(min-width: 375px) and (max-width: 812px){
+    .fila{
+        display: flex;
+        justify-content: center !important;
+    }
+    .card{
+        margin: 10px;
+    }
 }

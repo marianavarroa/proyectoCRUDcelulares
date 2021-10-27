@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Página de administración de celulares">
-    <meta name="keywords" content="Crear producto, eliminar, editar">
-    <meta name="author" content="Grupo 2 Comisión 16i">
+    <meta name="description" content="Página de administración de celulares" />
+    <meta name="keywords" content="Crear producto, eliminar, editar" />
+    <meta name="author" content="Grupo 2 Comisión 16i" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
@@ -24,34 +24,48 @@
         "
         id="navbar"
       >
-        <div class="container-fluid  ">
+        <div class="container-fluid">
           <div class="align-self-start mx-0">
             <button
-            class="navbar-toggler  botonToggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+              class="navbar-toggler botonToggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
-          
-          <a class="navbar-brand  text-white-50 mx-auto" href="#"><img class="w-50 logo1" src="/img/Logo Completo.png" alt=""><img class="w-50 logo2 align-self-start" src="/img/solo-logo-practico.png" alt=""></a>
-          <div
-            class="collapse navbar-collapse "
-            id="navbarNavAltMarkup"
-          >
-            <div class="navbar-nav container text-start" >
-              <a class="nav-link mx-5" href="index.html"
-                >Inicio</a
+
+          <a class="navbar-brand text-white-50 mx-auto" href="#"
+            ><img class="w-50 logo1" src="/img/Logo Completo.png" alt="" /><img
+              class="w-50 logo2 align-self-start"
+              src="/img/solo-logo-practico.png"
+              alt=""
+          /></a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav container text-start">
+              <a class="nav-link mx-5" href="index.html">Inicio</a>
+              <a
+                class="nav-link mx-5"
+                aria-current="page"
+                href="/pages/admin.html"
+                >Administracion</a
               >
-              <a class="nav-link mx-5" aria-current="page" href="/pages/admin.html">Administracion</a>
-              <a class="nav-link mx-5" href="/pages/sobrenosotros.html">Sobre Nosotros</a>
-              <a class="nav-link mx-5" id="linkRegistro" href="/pages/registro.html">Registro</a>
-              <a class="nav-link mx-5" id="linkPerfil" href="/pages/login.html">Login</a>
+              <a class="nav-link mx-5" href="/pages/sobrenosotros.html"
+                >Sobre Nosotros</a
+              >
+              <a
+                class="nav-link mx-5"
+                id="linkRegistro"
+                href="/pages/registro.html"
+                >Registro</a
+              >
+              <a class="nav-link mx-5" id="linkPerfil" href="/pages/login.html"
+                >Login</a
+              >
             </div>
           </div>
         </div>
@@ -61,48 +75,97 @@
       <section>
         <h1 class="text-center display-3 mt-5">Productos</h1>
         <article>
-          <form class="bg-light py-4 px-3 rounded my-4 border border-dark " id="formProducto">
+          <form
+            class="bg-light py-4 px-3 rounded my-4 border border-dark"
+            id="formProducto"
+          >
             <div class="mb-3">
               <label for="codigo" class="form-label text-dark"
                 >Código único de producto:</label
               >
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="codigo" required />
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
+              <input
+                type="text"
+                class="form-control rounded-pill border-dark border-1"
+                id="codigo"
+                required
+              />
+              <div class="invalid-feedback text-white">
+                Este campo es obligatorio.
+              </div>
             </div>
             <div class="mb-3">
               <label for="producto" class="form-label text-dark"
                 >Nombre de producto:</label
               >
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="producto" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
+              <input
+                type="text"
+                class="form-control rounded-pill border-dark border-1"
+                id="producto"
+                required
+              />
+              <div class="invalid-feedback text-white">
+                Este campo es obligatorio.
+              </div>
             </div>
             <div class="mb-3">
-              <label for="descripcion" class="form-label text-dark">Descripción:</label>
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="descripcion" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
+              <label for="descripcion" class="form-label text-dark"
+                >Descripción:</label
+              >
+              <input
+                type="text"
+                class="form-control rounded-pill border-dark border-1"
+                id="descripcion"
+                required
+              />
+              <div class="invalid-feedback text-white">
+                Este campo es obligatorio.
+              </div>
             </div>
             <div class="mb-3">
               <label for="url" class="form-label text-dark">Imagen URL:</label>
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="url" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
+              <input
+                type="text"
+                class="form-control rounded-pill border-dark border-1"
+                id="url"
+                required
+              />
+              <div class="invalid-feedback text-white">
+                Este campo es obligatorio.
+              </div>
             </div>
             <div class="mb-3">
               <label for="url" class="form-label text-dark">Precio:</label>
-              <input type="text" class="form-control rounded-pill border-dark border-1" id="precio" required/>
-              <div class="invalid-feedback text-white">Este campo es obligatorio.</div>
+              <input
+                type="text"
+                class="form-control rounded-pill border-dark border-1"
+                id="precio"
+                required
+              />
+              <div class="invalid-feedback text-white">
+                Este campo es obligatorio.
+              </div>
             </div>
             <div class="alert alert-danger d-none" role="alert" id="msjAlerta">
               Debe completar todos los datos marcados
             </div>
-            <button type="submit" class="btn btn-outline-dark border-dark rounded-pill border">Guardar</button>
+            <button
+              type="submit"
+              class="btn btn-outline-dark border-dark rounded-pill border"
+            >
+              Guardar
+            </button>
           </form>
         </article>
       </section>
       <section>
         <h2 class="display-3 text-center">Tabla de productos</h2>
         <hr />
-        <button class="btn btn-outline-dark rounded-pill my-3" id="btnAgregar">Nuevo</button>
-        <button class="btn btn-outline-dark rounded-pill" id="cargaDatosPrueba">Cargar datos de prueba</button>
+        <button class="btn btn-outline-dark rounded-pill my-3" id="btnAgregar">
+          Nuevo
+        </button>
+        <button class="btn btn-outline-dark rounded-pill" id="cargaDatosPrueba">
+          Cargar datos de prueba
+        </button>
         <div class="table-responsive">
           <table class="table table-light border border-dark rounded">
             <thead>
@@ -160,8 +223,15 @@
           >
             <div class="border border-secondary linea-footer my-3"></div>
           </div>
-          <div class="col-sm-12 col-md-3 col-lg-3  text-center d-flex align-items-center ">
-            <img class="w-75 mx-5" src="/img/Logo Completo.png" alt="">
+          <div
+            class="
+              col-sm-12 col-md-3 col-lg-3
+              text-center
+              d-flex
+              align-items-center
+            "
+          >
+            <img class="w-75 mx-5" src="/img/Logo Completo.png" alt="" />
           </div>
           <!-- ===========LINEA EN FOOTER============== -->
           <div
@@ -203,9 +273,8 @@
     <script src="../js/bootstrap.min.js"></script>
     <script type="module" src="../js/admin.js"></script>
     <script
-    src="https://kit.fontawesome.com/fa326d3c28.js"
-    crossorigin="anonymous"
-  ></script>
-
+      src="https://kit.fontawesome.com/fa326d3c28.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

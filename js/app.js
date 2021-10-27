@@ -36,7 +36,7 @@ function crearColumna(itemProducto) {
     let grilla = document.querySelector('#grilla');
     console.log(itemProducto);
     grilla.innerHTML += `<div class="col col-sm-12 col-lg-3 my-5">
-        <div class="card transicion1">
+        <div class="card transicion1 mx-auto">
             <img src="${itemProducto.url}"
                 class="card-img-top" alt="${itemProducto.producto}">
             <div class="card-body text-center transicion2">

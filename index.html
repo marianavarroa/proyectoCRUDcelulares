@@ -10,17 +10,49 @@
     <meta name="description" content="pagina web de venta de celulares">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Callingcode</title>
 </head>
 
 <body>
-    <nav></nav>
+    <header>
+        <nav class="
+            letraChica
+            navbar navbar-expand-lg navbar-dark
+            colorNavbar
+            fixed-top
+            py-0
+          " id="navbar">
+            <div class="container-fluid  ">
+                <div class="align-self-start mx-0">
+                    <button class="navbar-toggler  botonToggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <a class="navbar-brand  text-white-50 mx-auto" href="#"><img class="w-50 logo1"
+                        src="/img/Logo Completo.png" alt=""><img class="w-50 logo2 align-self-start"
+                        src="/img/solo-logo-practico.png" alt=""></a>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav container text-start">
+                        <a class="nav-link mx-5" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link mx-5" href="/pages/admin.html">Administracion</a>
+                        <a class="nav-link mx-5" href="/pages/sobrenosotros.html">Sobre Nosotros</a>
+                        <a class="nav-link mx-5" id="linkRegistro" href="/pages/registro.html">Registro</a>
+                        <a class="nav-link mx-5" id="linkPerfil" href="/pages/login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <section>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./img/imagen1.jpg" alt="imagen celular"" class=" d-block w-100" alt="imagen celular 1"    >
+                        <img src="./img/imagen1.jpg" alt="imagen celular"" class=" d-block w-100"
+                            alt="imagen celular 1">
                     </div>
                     <div class="carousel-item">
                         <img src="./img/imagen2.jpg" class="d-block w-100" alt="imagen celular 2">
@@ -42,17 +74,79 @@
         <section class="container">
             <h2 class="text-center m-3" id="titulo">Productos</h2>
             <hr>
-            
+
             <div class="row d-flex justify-content-around" id="grilla">
 
-            </div>          
+            </div>
 
-        </section>   
+        </section>
     </main>
-    <footer></footer>
+    <footer class="bg-light text-secondary letraChica   mt-auto">
+        <div class="container">
+            <!-- ======DIVIDIENDO FOOTER EN  COLUMNAS===== -->
+            <div class="row">
+                <div class="
+                col-sm-12 col-md-3 col-lg-3
+                text-center
+                d-flex
+                align-items-center
+                justify-content-center
+              ">
+                    <div class="d-flex flex-column text-start">
+                        <h6 class="mx-0 text-dark">Navegacion:</h6>
+                        <a class="text-dark claseLinksFooter ms-3 my-1" href="#">Inicio</a>
+                        <a class="text-dark claseLinksFooter ms-3 my-1" href="/pages/admin.html">Administracion</a>
+                        <a class="text-dark claseLinksFooter ms-3 my-1" href="#">Sobre Nosotros</a>
+                        <a class="text-dark claseLinksFooter ms-3 my-1" href="#">Contacto</a>
+                    </div>
+                </div>
+                <!-- ===========LINEA EN FOOTER============== -->
+                <div class="
+                col-sm-12 col-md-1 col-lg-1
+                d-flex
+                align-items-center
+                justify-content-center
+              ">
+                    <div class="border border-secondary linea-footer my-3"></div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3  text-center d-flex align-items-center ">
+                    <img class="w-75 mx-5" src="/img/Logo Completo.png" alt="">
+                </div>
+                <!-- ===========LINEA EN FOOTER============== -->
+                <div class="
+                col-sm-12 col-md-1 col-lg-1
+                d-flex
+                align-items-center
+                justify-content-center
+              ">
+                    <div class="border border-secondary linea-footer my-3"></div>
+                </div>
+                <div class="
+                col-sm-12 col-md-3 col-lg-3
+                text-center
+                d-flex
+                align-items-center
+                justify-content-center
+              ">
+                    <div class="">
+                        <!-- ======LINKEAR A PAGINA 404===== -->
+                        <h6 class="text-dark">Siguenos en nuestras redes:</h6>
+                        <a class="text-secondary" href="/pages/404.html"><i
+                                class="fab fa-facebook-square fa-2x mx-2"></i></a>
+                        <a class="text-secondary" href="/pages/404.html"><i
+                                class="fab fa-twitter-square fa-2x mx-2"></i></a>
+                        <a class="text-secondary" href="/pages/404.html"><i
+                                class="fab fa-instagram-square fa-2x mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/fa326d3c28.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

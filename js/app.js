@@ -1,4 +1,4 @@
-// prueba con clase y objetos
+/* // prueba con clase y objetos
 class Celular {
     constructor(imagen, descripcion, caracteristicas, precio){
         this.imagen = imagen;
@@ -11,39 +11,37 @@ let celularIphone = new Celular ("https://store.storeimages.cdn-apple.com/8756/a
 let celularMotorola = new Celular ("https://armoto.vteximg.com.br/arquivos/ids/160628-700-700/e20_1000x1000_envio.png?v=637703607859800000", 'Moto E20', 'caracteristicas', 39.999);
 let celularSamsung = new Celular ("https://images.samsung.com/is/image/samsung/ar-galaxy-s20-fe-g780-sm-g780fzblaro-lcloudnavy-thumb-308700595?$216_216_PNG$", 'Samsung G20', 'caracteristicas', 89.999);
 
+*/
+let productos = []; 
 
-let productos = [celularIphone, celularMotorola, celularSamsung];
 
 cargarInicial();
 
 // localstorage
 
-// localStorage.setItem('...', JSON.stringify(...));
-
 function cargarInicial() {
-    /* productos = JSON.parse(localStorage.getItem('...')) || [];
+    productos = JSON.parse(localStorage.getItem('productosKey')) || [];
 
     // si hay datos dentro del arreglo dibujo las columnas con cards
     if (productos.length > 0) {
        
-    } */
-    
-    // aqui dibujo las cards o columnas
-    productos.forEach(producto => {
-        crearColumna(producto);        
-    });
+        // aqui dibujo las cards o columnas
+        productos.forEach(itemProducto => {
+            crearColumna(itemProducto);        
+        });
+    }    
 }
 
-function crearColumna(producto) {
+function crearColumna(itemProducto) {
     let grilla = document.querySelector('#grilla');
-    console.log(producto);
+    console.log(itemProducto);
     grilla.innerHTML += `<div class="col col-sm-12 col-lg-3 m-3">
         <div class="card transicion1">
-            <img src="${producto.imagen}"
-                class="card-img-top" alt="${producto.descripcion}">
+            <img src="${itemProducto.url}"
+                class="card-img-top" alt="${itemProducto.producto}">
             <div class="card-body text-center transicion2">
-                <h5 class="card-title" id="celular1n">${producto.descripcion}</h5>
-                <p class="card-text" id="celular1p">$${producto.precio}</p>
+                <h5 class="card-title" id="celular1n">${itemProducto.producto}</h5>
+                <p class="card-text" id="celular1p">${itemProducto.precio}</p>
             </div>
         </div>
     </div>`

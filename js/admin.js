@@ -253,31 +253,7 @@ function cargarDatosPrueba() {
       url: "https://http2.mlstatic.com/D_NQ_NP_637579-MLA47860056829_102021-O.webp",
       precio: "$86.999",
     },
-    {
-      codigo: "2345",
-      producto: "Apple iPhone 11 (128 GB) - Negro",
-      cantidad: "1",
-      descripcion:
-        "Sistema de dos cámaras de 12 MP (ultra gran angular y gran angular) con modo Noche, modo Retrato y video 4K de hasta 60 cps.",
-      url: "https://http2.mlstatic.com/D_NQ_NP_865864-MLA46114990464_052021-O.webp",
-      precio: "$196.050",
-    },
-    {
-      codigo: "3456",
-      producto: "Imagen 1 de 4 de  Moto G20 64 GB azul cielo 4 GB RAM",
-      cantidad: "1",
-      descripcion: "Memoria interna de 64GB. Apto para tarjeta SD de 1TB.",
-      url: "https://http2.mlstatic.com/D_NQ_NP_601015-MLA47152736489_082021-O.webp",
-      precio: "$29.999",
-    },
-    {
-      codigo: "4567",
-      producto: "Xiaomi Redmi Note 10S Dual SIM 128 GB blanco piedra 6 GB RAM",
-      cantidad: "1",
-      descripcion: "Memoria interna de 128GB. Apto para tarjeta SD de 512GB.",
-      url: "https://http2.mlstatic.com/D_NQ_NP_777635-MLA46924539963_072021-O.webp",
-      precio: "$53.999",
-    },
+    
     {
       codigo: "5678",
       producto: "LG K61 128 GB titanio 4 GB RAM",
@@ -313,6 +289,32 @@ function cargarDatosPrueba() {
       url: "https://http2.mlstatic.com/D_NQ_NP_622257-MLA47500407340_092021-O.webp",
       precio: "$74.999",
     },
+    {
+      codigo: "2345",
+      producto: "Apple iPhone 11 (128 GB) - Negro",
+      cantidad: "1",
+      descripcion:
+        "Sistema de dos cámaras de 12 MP (ultra gran angular y gran angular) con modo Noche, modo Retrato y video 4K de hasta 60 cps.",
+      url: "https://http2.mlstatic.com/D_NQ_NP_865864-MLA46114990464_052021-O.webp",
+      precio: "$196.050",
+    },
+    {
+      codigo: "4567",
+      producto: "Xiaomi Redmi Note 10S Dual SIM 128 GB blanco piedra 6 GB RAM",
+      cantidad: "1",
+      descripcion: "Memoria interna de 128GB. Apto para tarjeta SD de 512GB.",
+      url: "https://http2.mlstatic.com/D_NQ_NP_777635-MLA46924539963_072021-O.webp",
+      precio: "$53.999",
+    },
+    {
+      codigo: "3456",
+      producto: "Imagen 1 de 4 de  Moto G20 64 GB azul cielo 4 GB RAM",
+      cantidad: "1",
+      descripcion: "Memoria interna de 64GB. Apto para tarjeta SD de 1TB.",
+      url: "https://http2.mlstatic.com/D_NQ_NP_601015-MLA47152736489_082021-O.webp",
+      precio: "$29.999",
+    },
+    
   ];
   if (!localStorage.getItem("productosKey")) {
     //quiero agregar los datos de prueba

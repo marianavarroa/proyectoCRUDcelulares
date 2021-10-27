@@ -35,7 +35,7 @@ function cargarInicial() {
 function crearColumna(itemProducto) {
     let grilla = document.querySelector('#grilla');
     console.log(itemProducto);
-    grilla.innerHTML += `<div class="col col-sm-12 col-lg-3 m-3">
+    grilla.innerHTML += `<div class="col col-sm-12 col-lg-3 my-5">
         <div class="card transicion1">
             <img src="${itemProducto.url}"
                 class="card-img-top" alt="${itemProducto.producto}">

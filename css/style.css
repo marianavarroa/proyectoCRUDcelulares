@@ -99,6 +99,7 @@ div.fila{
 }
 .title{
     margin-top: 80px;
+    font-family: 'Noto Sans', sans-serif;
 }
 .frase{
     text-align: end;
@@ -126,4 +127,83 @@ div.fila{
     .card{
         margin: 10px;
     }
+}
+
+#titulo {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto', sans-serif;
+    text-decoration: none;
+  }
+  
+  
+  #titulo {
+    position: relative;
+    font-family:  'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
+  /* efecto transicion /
+  .transicion1 {
+    background: #f1f1f1;
+    transition: .5s;
+  }
+  .transicion1:hover {
+    background: #e1e1e1;
+  }
+  
+  .transicion2 {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .transicion2 p:last-child {
+    transition: .5s;
+    margin-top: 10px;
+  }
+  .transicion1:hover > .transicion2 p:last-child {
+    color: #3498db;
+  }
+  
+  / box shadow */
+  .card:hover {
+    box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);
+  -webkit-box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);
+  -moz-box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);
+  }
+
+  .slider-Responsive{
+    height: 550px;
+    object-fit: cover;
 }

@@ -58,3 +58,72 @@
 .esconderElemento{
     display: none;
 }
+div.foto{
+    min-width: 250px;
+    border: 50px;
+    border: 2px solid rgba(0,0,0,.125);
+}
+
+img.imagen{
+    padding-top: 1rem;
+}
+
+div.foto .texto{
+    text-align: center;
+    padding-bottom: 1rem ;
+}
+@media(max-width: 800px){
+    div.foto {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    div.fila{
+        margin: 0 !important;
+    }
+}
+
+div.foto img{
+   min-width: 222px;
+}
+
+div.imagen{
+    min-width: 200px;
+}
+
+.texto{
+    margin-bottom: 20px;
+}
+
+div.fila{
+    margin: 2rem 0;
+}
+.title{
+    margin-top: 80px;
+}
+.frase{
+    text-align: end;
+    padding-top: 5rem;
+    font-style: italic;
+}
+.card{
+    width: 15rem;
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    .fila{
+        display: flex;
+        justify-content: space-evenly !important;
+    }
+    .card{
+        width: 18rem;
+        margin: 15px;
+    }
+}
+@media(min-width: 375px) and (max-width: 812px){
+    .fila{
+        display: flex;
+        justify-content: center !important;
+    }
+    .card{
+        margin: 10px;
+    }
+}

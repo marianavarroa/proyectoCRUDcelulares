@@ -13,7 +13,9 @@ export function validarCampoRequerido(input) {
 }
 
 export function validarCodigo(input) {
-  if (input.value.trim() != "" && input.value.trim().length >= 3) {
+  // validar con expresiones regulares
+  let patron = /^[0-9]{1,5}$/;
+  if (patron.test(input.value)) {
     input.className = "form-control rounded-pill border-1 is-valid";
     return true;
   } else {
@@ -43,7 +45,8 @@ export function validarGeneral() {
     validarCodigo(document.querySelector("#codigo")) &&
     validarCampoRequerido(document.querySelector("#producto")) &&
     validarCampoRequerido(document.querySelector("#descripcion")) &&
-    validarUrl(document.querySelector("#url"))
+    validarUrl(document.querySelector("#url")) &&
+    validarPrecio(document.querySelector("#precio"))
   ) {
     console.log("validación correcta");
     alerta.className = "alert alert-danger d-none";
@@ -51,6 +54,18 @@ export function validarGeneral() {
   } else {
     console.log("validación erronea");
     alerta.className = "alert alert-danger";
+    return false;
+  }
+}
+
+export function validarPrecio(input) {
+  // validar con expresiones regulares
+  let patron = /^[0-9]{4,10}$/;
+  if (patron.test(input.value)) {
+    input.className = "form-control rounded-pill border-1 is-valid";
+    return true;
+  } else {
+    input.className = "form-control rounded-pill border-1 is-invalid";
     return false;
   }
 }

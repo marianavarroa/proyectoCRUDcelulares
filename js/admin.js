@@ -3,6 +3,7 @@ import {
   validarCodigo,
   validarUrl,
   validarGeneral,
+  validarPrecio,
 } from "./validaciones.js";
 
 import { Producto } from "./productoClass.js";
@@ -35,7 +36,7 @@ url.addEventListener("blur", () => {
   validarUrl(url);
 });
 precio.addEventListener("blur", () => {
-  validarCampoRequerido(precio);
+  validarPrecio(precio);
 });
 formulario.addEventListener("submit", guardarProducto);
 btnAgregar.addEventListener("click", limpiarFormulario);
@@ -61,15 +62,22 @@ function guardarProducto(event) {
   event.preventDefault();
   //primero validar datos del form
   if (validarGeneral()) {
-    //tengo que modificar o tengo que agregar uno nuevo?
     if (productoExistente) {
       //modificar
       actualizarProducto();
     } else {
-      //agregar
-      //si esta todo ok crear un nuevo producto
-      agregarProducto();
+      if(validarCodigoExistente(codigo.value)){
+        console.log("acá no existe");
+        //agregar
+        //si esta todo ok crear un nuevo producto
+        agregarProducto();
+
+      }else{
+        console.log("acá existe");
+        alert('El código ya está en uso.')
+      }
     }
+    //tengo que modificar o tengo que agregar uno nuevo?
   } else {
     console.log("aqui solo mostrar el cartel de error");
   }
@@ -111,7 +119,7 @@ function crearFila(itemProducto) {
     <td>${itemProducto.producto}</td>
     <td>${itemProducto.descripcion}</td>
     <td>${itemProducto.url}</td>
-    <td>${itemProducto.precio}</td>
+    <td>$${itemProducto.precio}</td>
     <td>
       <button class="btn btn-outline-dark my-2" onclick="prepararEdicionProducto(${itemProducto.codigo})">Editar</button>
       <button class="btn btn-outline-danger my-2" onclick="borrarProducto(${itemProducto.codigo})">Borrar</button>
@@ -243,6 +251,20 @@ function actualizarProducto() {
   });
 }
 
+
+function validarCodigoExistente(input) {
+  let a = productos.find((b) => {
+    return b.codigo == input;
+  });
+  console.log(a);
+  if (a == null) {
+    //let errores = "El nombre se encuentra en uso <br>";
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function cargarDatosPrueba() {
   const datos = [
     {
@@ -251,7 +273,7 @@ function cargarDatosPrueba() {
       descripcion: "Procesador Exynos 990 Octa-Core de 2.73GHz con 6GB de RAM.",
       cantidad: "1",
       url: "https://http2.mlstatic.com/D_NQ_NP_637579-MLA47860056829_102021-O.webp",
-      precio: "$86.999",
+      precio: "86.999",
     },
     
     {
@@ -261,7 +283,7 @@ function cargarDatosPrueba() {
       descripcion:
         "Procesador MediaTek MT6765 Helio P35 Octa-Core de 2.3GHz con 4GB de RAM.",
       url: "https://http2.mlstatic.com/D_NQ_NP_867960-MLA46366600614_062021-O.webp",
-      precio: "$31.999",
+      precio: "31.999",
     },
     {
       codigo: "6789",
@@ -269,7 +291,7 @@ function cargarDatosPrueba() {
       cantidad: "1",
       descripcion: "Tamaño de la pantalla: 5.9 pulgadas",
       url: "https://http2.mlstatic.com/D_NQ_NP_836368-MLA47044200655_082021-O.webp",
-      precio: "$29.399",
+      precio: "29.399",
     },
     {
       codigo: "7890",
@@ -278,7 +300,7 @@ function cargarDatosPrueba() {
       descripcion:
         "Procesador MediaTek MT6765 Helio P35 Octa-Core de 2.3GHz con 4GB de RAM.",
       url: "https://http2.mlstatic.com/D_NQ_NP_896678-MLA47690462666_092021-O.webp",
-      precio: "$27.999",
+      precio: "27.999",
     },
     {
       codigo: "8909",
@@ -287,7 +309,7 @@ function cargarDatosPrueba() {
       descripcion:
         "Procesador Snapdragon 780G Octa-Core de 2.4GHz con 6GB de RAM.",
       url: "https://http2.mlstatic.com/D_NQ_NP_622257-MLA47500407340_092021-O.webp",
-      precio: "$74.999",
+      precio: "74.999",
     },
     {
       codigo: "2345",
@@ -296,7 +318,7 @@ function cargarDatosPrueba() {
       descripcion:
         "Sistema de dos cámaras de 12 MP (ultra gran angular y gran angular) con modo Noche, modo Retrato y video 4K de hasta 60 cps.",
       url: "https://http2.mlstatic.com/D_NQ_NP_865864-MLA46114990464_052021-O.webp",
-      precio: "$196.050",
+      precio: "196.050",
     },
     {
       codigo: "4567",
@@ -304,7 +326,7 @@ function cargarDatosPrueba() {
       cantidad: "1",
       descripcion: "Memoria interna de 128GB. Apto para tarjeta SD de 512GB.",
       url: "https://http2.mlstatic.com/D_NQ_NP_777635-MLA46924539963_072021-O.webp",
-      precio: "$53.999",
+      precio: "53.999",
     },
     {
       codigo: "3456",
@@ -312,7 +334,7 @@ function cargarDatosPrueba() {
       cantidad: "1",
       descripcion: "Memoria interna de 64GB. Apto para tarjeta SD de 1TB.",
       url: "https://http2.mlstatic.com/D_NQ_NP_601015-MLA47152736489_082021-O.webp",
-      precio: "$29.999",
+      precio: "29.999",
     },
     
   ];

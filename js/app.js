@@ -41,7 +41,7 @@ function crearColumna(itemProducto) {
                 class="card-img-top" alt="${itemProducto.producto}">
             <div class="card-body text-center transicion2">
                 <h5 class="card-title" id="celular1n">${itemProducto.producto}</h5>
-                <p class="card-text" id="celular1p">${itemProducto.precio}</p>
+                <p class="card-text" id="celular1p">$${itemProducto.precio}</p>
             </div>
         </div>
     </div>`

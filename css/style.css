@@ -140,7 +140,7 @@ div.fila{
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 3s linear infinite;
-    -webkit-background-clip: text;
+background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
   * {

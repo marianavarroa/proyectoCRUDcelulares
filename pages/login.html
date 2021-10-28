@@ -14,60 +14,62 @@
   <body class="d-flex flex-column min-vh-100">
     <header>
       <nav
-        class="
-          letraChica
-          navbar navbar-expand-lg navbar-dark
-          colorNavbar
-          fixed-top
-          py-0
-        "
-        id="navbar"
-      >
-        <div class="container-fluid  ">
-          <div class="align-self-start mx-0">
-            <button
-              class="navbar-toggler  botonToggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+      class="
+        letraChica
+        navbar navbar-expand-lg navbar-dark
+        colorNavbar
+        fixed-top
+        py-0
+      "
+      id="navbar"
+    >
+      <div class="container-fluid  ">
+        <div class="align-self-start mx-0">
+          <button
+            class="navbar-toggler  botonToggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+        </div>
+        <a class="navbar-brand  text-white-50 mx-auto" href="#"
+          ><img class="w-50 logo1" src="../img/Logo Completo.png" alt=""/><img
+            class="w-50 logo2 align-self-start"
+            src="/img/solo-logo-practico.png"
+            alt=""
+        /></a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          
+          <div class="navbar-nav container-fluid d-flex justify-content-center text-start pe-5 me-5">
+            
+            <a class="nav-link mx-5 " href="/index.html"
+              >Inicio</a
             >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-
-          <a class="navbar-brand  text-white-50 mx-auto" href="/index.html"
-            ><img class="w-50 logo1" src="../img/Logo Completo.png" alt=""/><img
-              class="w-50 logo2 align-self-start"
-              src="/img/solo-logo-practico.png"
-              alt=""
-          /></a>
-          <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-            <div class="navbar-nav container text-start">
-              <a class="nav-link mx-5" href="/index.html"
-                >Inicio</a
-              >
-              <a class="nav-link mx-5" href="/pages/admin.html"
-                >Administracion</a
-              >
-              <a class="nav-link mx-5"  href="/pages/acercadenos.html"
-                >Sobre Nosotros</a
-              >
-              <a
-                class="nav-link mx-5"
-                id="linkRegistro"
-                href="/pages/registro.html"
-                >Registro</a
-              >
-              <a class="nav-link mx-5 active" aria-current="page" id="linkPerfil" href="/pages/login.html"
-                >Login</a
-              >
-            </div>
+            <a class="nav-link mx-5" href="/pages/admin.html"
+              >Administracion</a
+            >
+            <a class="nav-link mx-5"  href="/pages/acercadenos.html"
+              >Sobre Nosotros</a
+            >
+            <a
+              class="nav-link mx-5"
+              id="linkRegistro"
+              href="/pages/registro.html"
+              >Registro</a
+            >
+            <a class="nav-link mx-5 active" id="linkPerfil" aria-current="page" href="/pages/login.html"
+              >Login</a
+            >
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     </header>
       <main class="mt-5 container text-center ">
           <section class="row  " id="sectionFormLogin">
@@ -99,6 +101,24 @@
             </div>
             <div>
               <button type="btn" class="btn btn-dark" id="btnDeslogear">Deslogear</button>
+            </div>
+            <h5 class="text-start">Carrito de usuario</h5>
+            <div class="table-responsive">
+              <table class="table table-light border border-dark rounded">
+                <thead>
+                  <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaProductos"></tbody>
+              </table>
+            </div>
+            <div class="my-0 py-0 text-end">
+              <p class="text-end text-danger" id="totalCarritoPagar"></p> 
+              
             </div>
           </div>
           

@@ -36,7 +36,6 @@ export function validarUrl(input) {
 
 export function validarGeneral() {
   let alerta = document.querySelector("#msjAlerta");
-
   if (
     validarCodigo(document.querySelector("#codigo")) &&
     validarCampoRequerido(document.querySelector("#producto")) &&

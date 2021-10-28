@@ -69,10 +69,8 @@ function nombreUsuario(x) {
       crearFila(productoCarro);
     });
   }else{
-
   }
 }
-
 function crearFila(itemProducto) {
   let tabla = document.querySelector("#tablaProductos");
   //creo la tabla
@@ -87,7 +85,6 @@ function crearFila(itemProducto) {
   totalPagar =  parseFloat(itemProducto.precio) + totalPagar;
   let mostrarTotalPagar = document.querySelector("#totalCarritoPagar");
   mostrarTotalPagar.innerHTML = `Total a pagar: ${totalPagar}`;
-
 }
 window.borrarProductoCarrito = (x) => {
   let a = listaUsuariosGuardados.find((b) => {
@@ -113,9 +110,7 @@ window.borrarProductoCarrito = (x) => {
    localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuariosGuardados));
     location.reload();
  }
-
 }
-
 //funcion para el boton "deslogear", se encarga de remover el usuario logeado del localstorage, limpiar el array de la memoria, borrar el parrafo donde se muetra el nombre de usuario y recargar la pagina
 function deslogeando() {
   localStorage.removeItem("usuarioLogeado");
@@ -123,7 +118,6 @@ function deslogeando() {
   logeado = 0;
   location.reload();
 }
-
 //funcion para cambiar el boton de login en la NAVBAR  
 export function cambiarNavbar(x){
 let btnLoginNavbar = document.querySelector("#linkPerfil");

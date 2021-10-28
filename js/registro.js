@@ -94,6 +94,7 @@ function cargarArray(e) {
           "listaUsuarios",
           JSON.stringify(listaUsuariosGuardados)
         );
+        window.alert("Usuario creado");
         location.reload();
       }
     }

@@ -1,5 +1,4 @@
 import { Usuario } from "./usuarioClass.js";
-//import { validarCampoRequerido } from "./validaciones.js";
 
 let campoNombreUsuario = document.querySelector("#campoNombreUsuario");
 let campoEmailUsuario = document.querySelector("#campoEmailUsuario");
@@ -23,14 +22,11 @@ campoPasswordUsuario.addEventListener("blur", () => {
 formRegistro.addEventListener("submit", cargarArray);
 
 function validarCampoRequerido(input) {
-  //console.log(input)
   console.log(input.value);
   if (input.value.trim().length > 0 && input.value.trim().length >= 3) {
-    console.log("el dato es correcto");
     input.className = "form-control border-1 is-valid";
     return true;
   } else {
-    console.log("el dato es erroneo");
     input.className = "form-control border-1 is-invalid";
     return false;
   }
@@ -73,10 +69,6 @@ function validarNombreUsado(x) {
 function mostrarError(){
     parrafo.innerHTML = errores;
 }
-function reinicioMostrarError(){
-   
-}
-
 function cargarArray(e) {
   e.preventDefault();
   if (

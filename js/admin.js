@@ -164,7 +164,6 @@ function borrarFilas() {
 }
 
 window.borrarProducto = (codigo) => {
-  //console.log(codigo);
   Swal.fire({
     title: "¿Está seguro que desea eliminar el producto?",
     text: "Este proceso no puede revertirse",
@@ -203,8 +202,6 @@ window.borrarProducto = (codigo) => {
 };
 
 function actualizarProducto() {
-  //console.log(codigo.value);
-  //console.log("Acá tengo que mofificar los productos");
   Swal.fire({
     title: "¿Está seguro que desea editar el producto?",
     text: "No puede revertir este proceso",
@@ -221,8 +218,6 @@ function actualizarProducto() {
       let indiceProducto = productos.findIndex((itemProducto) => {
         return itemProducto.codigo == codigo.value;
       });
-      //console.log(indiceProducto);
-      //console.log(productos[indiceProducto].nombreProducto);
       //actualizar los valores del objeto encontrado dentro del array
       productos[indiceProducto].producto =
         document.querySelector("#producto").value;
@@ -348,8 +343,6 @@ function cargarDatosPrueba() {
     productos.forEach((itemProducto) => {
       crearFila(itemProducto);
     });
-  } else {
-    //no quiero hacer nada
-    console.log("acá no cargo productos");
-  }
+
+}
 }

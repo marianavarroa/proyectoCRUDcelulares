@@ -175,28 +175,6 @@ div.fila{
     }
   }
   
-  /* efecto transicion /
-  .transicion1 {
-    background: #f1f1f1;
-    transition: .5s;
-  }
-  .transicion1:hover {
-    background: #e1e1e1;
-  }
-  
-  .transicion2 {
-    margin: 20px 0;
-    text-align: center;
-  }
-  .transicion2 p:last-child {
-    transition: .5s;
-    margin-top: 10px;
-  }
-  .transicion1:hover > .transicion2 p:last-child {
-    color: #3498db;
-  }
-  
-  / box shadow */
   .card:hover {
     box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);
   -webkit-box-shadow: 2px 2px 27px -8px rgba(0,0,0,0.59);

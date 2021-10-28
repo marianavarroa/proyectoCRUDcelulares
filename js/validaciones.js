@@ -1,12 +1,8 @@
 export function validarCampoRequerido(input) {
-  //console.log(input)
-  console.log(input.value);
   if (input.value.trim().length > 0 && input.value.trim().length >= 3) {
-    console.log("el dato es correcto");
     input.className = "form-control rounded-pill border-1 is-valid";
     return true;
   } else {
-    console.log("el dato es erroneo");
     input.className = "form-control rounded-pill border-1 is-invalid";
     return false;
   }
@@ -48,11 +44,9 @@ export function validarGeneral() {
     validarUrl(document.querySelector("#url")) &&
     validarPrecio(document.querySelector("#precio"))
   ) {
-    console.log("validación correcta");
     alerta.className = "alert alert-danger d-none";
     return true;
   } else {
-    console.log("validación erronea");
     alerta.className = "alert alert-danger";
     return false;
   }
